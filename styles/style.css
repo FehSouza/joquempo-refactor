@@ -58,8 +58,8 @@ body {
   border-radius: 17px;
 }
 
-.player-points1,
-.player-points2 {
+.player-points-1,
+.player-points-2 {
   font-size: 104px;
   font-weight: 900;
   color: #0099ff;
@@ -109,6 +109,13 @@ body {
   margin: 35px;
   background-color: #ffffff;
   border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-2 {
+  transform: scaleX(-100%);
 }
 
 .versus-big {
@@ -120,4 +127,8 @@ body {
   width: 540px;
   display: flex;
   justify-content: space-between;
+}
+
+.image {
+  width: 325px;
 }

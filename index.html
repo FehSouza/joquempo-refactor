@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joquempô Refatorado</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <section class="scoreboard-wrapper">
+      <div class="winner">
+        <span class="player-winner">Aguardando iniciar!</span>
+      </div>
+      <div class="players-points-area">
+        <span class="player-name">Jogador 1</span>
+        <div class="points-area">
+          <div class="player-points">
+            <span class="player-points1">0</span>
+          </div>
+          <span class="versus">VS</span>
+          <div class="player-points">
+            <span class="player-points2">0</span>
+          </div>
+        </div>
+        <span class="player-name">Jogador 2</span>
+      </div>
+    </section>
+
+    <section class="game-area-wrapper">
+      <div class="button-area">
+        <button class="generic-button button-stone1">Pedra</button>
+        <button class="generic-button button-paper1">Papel</button>
+        <button class="generic-button button-scissors1">Tesoura</button>
+      </div>
+
+      <div class="game-area">
+        <div class="board board1"></div>
+        <span class="versus-big">VS</span>
+        <div class="board board2"></div>
+      </div>
+
+      <div class="button-area">
+        <button class="generic-button button-stone2">Pedra</button>
+        <button class="generic-button button-paper2">Papel</button>
+        <button class="generic-button button-scissors2">Tesoura</button>
+      </div>
+    </section>
+
+    <section class="option-wrapper">
+      <button class="generic-button button-start">Iniciar</button>
+      <button class="generic-button button-reset">Resetar</button>
+    </section>
+  </body>
+</html>

@@ -79,6 +79,7 @@ body {
   width: 220px;
   height: 80px;
   background-color: #0099ff;
+  transition: 350ms;
   border: 0px;
   border-radius: 8px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -89,8 +90,14 @@ body {
 
 .generic-button:hover {
   cursor: pointer;
-  transition: 300ms;
+  transition: 350ms;
   background-color: #0099ffb3;
+}
+
+.generic-button:disabled {
+  cursor: not-allowed;
+  transition: 350ms;
+  background-color: #39b0ff69;
 }
 
 .game-area {

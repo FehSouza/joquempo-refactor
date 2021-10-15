@@ -47,6 +47,30 @@ function verifyWinner() {
   }
 }
 
+function ativaBordaBoard(winner) {
+  if (winner == 0) {
+    $board1.classList.add("borda-amarela");
+    $board2.classList.add("borda-amarela");
+  }
+  if (winner == 1) {
+    $board1.classList.add("borda-verde");
+    $board2.classList.add("borda-vermelha");
+  }
+  if (winner == 2) {
+    $board2.classList.add("borda-verde");
+    $board1.classList.add("borda-vermelha");
+  }
+}
+
+function desativaBordaBoard() {
+  $board1.classList.remove("borda-amarela");
+  $board1.classList.remove("borda-verde");
+  $board1.classList.remove("borda-vermelha");
+  $board2.classList.remove("borda-amarela");
+  $board2.classList.remove("borda-verde");
+  $board2.classList.remove("borda-vermelha");
+}
+
 function printWinnerName(winner) {
   if (winner == 0) {
     $winnerName.innerHTML = "Empatou!";
@@ -63,6 +87,7 @@ function resetBoard() {
   player1 = "";
   player2 = "";
   resultVerifyWinner = null;
+  desativaBordaBoard();
 }
 
 function resetWinnerName() {
@@ -138,6 +163,7 @@ $buttonStone1.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);
@@ -153,6 +179,7 @@ $buttonPaper1.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);
@@ -168,6 +195,7 @@ $buttonScissors1.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);
@@ -183,6 +211,7 @@ $buttonStone2.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);
@@ -198,6 +227,7 @@ $buttonPaper2.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);
@@ -213,6 +243,7 @@ $buttonScissors2.addEventListener("click", function () {
   verifyWinner();
   printWinnerName(resultVerifyWinner);
   if ($board1.innerHTML != "" && $board2.innerHTML != "") {
+    ativaBordaBoard(resultVerifyWinner);
     givePoints(resultVerifyWinner);
     setTimeout(resetBoard, 1500);
     setTimeout(enableButtons, 1500);

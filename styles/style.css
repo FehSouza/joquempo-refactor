@@ -115,6 +115,7 @@ body {
   height: 345px;
   margin: 35px;
   background-color: #ffffff;
+  border: 10px solid #ffffff;
   border-radius: 17px;
   display: flex;
   justify-content: center;
@@ -138,4 +139,19 @@ body {
 
 .image {
   width: 325px;
+}
+
+.borda-verde {
+  border: 10px solid #008000;
+  transition: 750ms;
+}
+
+.borda-vermelha {
+  border: 10px solid #ff0000;
+  transition: 750ms;
+}
+
+.borda-amarela {
+  border: 10px solid #ffff00;
+  transition: 750ms;
 }
